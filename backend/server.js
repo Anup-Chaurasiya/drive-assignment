@@ -15,5 +15,9 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/folders', require('./routes/folders'));
 app.use('/api/images', require('./routes/images'));
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
